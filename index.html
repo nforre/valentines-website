@@ -28,7 +28,14 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="password-screen" class="container">
+        <h2>Enter the Secret Password 💕</h2>
+        <input type="password" id="password-input" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message" class="hidden">Incorrect password, try again! ❌</p>
+    </div>
+    
+    <div id="content" class="container hidden">
         <h1>Happy Valentine's Day, My Love! 💖</h1>
         <p class="message">You make my world brighter every single day. Here's a little something to show how much I love you! 💕</p>
         <button onclick="revealLove()">Click for a surprise! 🎁</button>
@@ -36,6 +43,16 @@
     </div>
 
     <script>
+        function checkPassword() {
+            const password = "love2024"; // Set your desired password here
+            const userInput = document.getElementById('password-input').value;
+            if (userInput === password) {
+                document.getElementById('password-screen').style.display = 'none';
+                document.getElementById('content').classList.remove('hidden');
+            } else {
+                document.getElementById('error-message').classList.remove('hidden');
+            }
+        }
         function revealLove() {
             document.getElementById('hidden-message').classList.toggle('hidden');
         }
