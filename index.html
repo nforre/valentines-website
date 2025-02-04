@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day! 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: pink;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day, My Love! 💖</h1>
+        <p class="message">You make my world brighter every single day. Here's a little something to show how much I love you! 💕</p>
+        <button onclick="revealLove()">Click for a surprise! 🎁</button>
+        <p id="hidden-message" class="hidden">You're my everything! ❤️</p>
+    </div>
+
+    <script>
+        function revealLove() {
+            document.getElementById('hidden-message').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
